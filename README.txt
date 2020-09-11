@@ -7,3 +7,12 @@ Minimum MVP almost done, due to time constraint I didnt focus on advanced featur
 in another 2 hours. 
 
 Import and Export Working good. I didnt include skills in the import/export due to time constraints.
+
+
+
+Files to review;
+ - index.html
+ - logic.js
+ - Player.js
+ - Skill.js
+ - utils.js

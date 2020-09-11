@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>XCite Game</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+	<div id="wrapper">
+		<header id="header">
+			<div class="logo">
+				<span class="icon fa-gem"></span>
+			</div>
+			<div class="content">
+				<div class="inner">
+					<h1>TRPG </h1>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#welcome">Begin</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div id="main">
+			<article id="welcome">
+				<h2 class="major">Player: <span id="attr_name"></span></h2>
+				<h5 class="major">Click to change your avatar </h5>
+				<img src="https://api.adorable.io/avatars/97/jj.io.png" id="player_avatar"  onclick="changeAvatar()"/>
+
+			
+				<div style="padding-top:20px;">
+					<input type="text" value=" Heroic Player" id="player_name">
+					<button onclick="setName()">Set Name</button>
+				</div>
+
+				<button> <a href="#base_attributes">Base attributes</a></button>
+				<button> <a href="#combat_attributes">Combat attributes</a></button>
+
+				<div class="container">
+					<button><a id="importJSON" onclick="importCharacter(this);"> Import Character</a></button>
+					<button><a id="exportJSON" onclick="exportCharacter(this);"> Export Character</a></button>
+				</div>
+			</article>
+
+			<article id="base_attributes">
+				<h3 class="major" id="main_attribute_selected">Please select your Base Attribute </h3>
+
+				<table style="width:100%">
+					<tr>
+						<td>
+							<h5 class="major">Base Attributes </h5>
+							<h5 onclick="selectBaseAttribute(this)">Strength : <span id="attr_strength"> </span> <span
+									id="attr_strength"></span> </h5>
+							<h5 onclick="selectBaseAttribute(this)"> Dexterity : <span id="attr_dexterity"></span></h5>
+							<h5 onclick="selectBaseAttribute(this)"> Mind : <span id="attr_mind"></span></h5>
+							<h5 onclick="selectBaseAttribute(this)"> Presence : <span id="attr_presence"></span></h5>
+							<button onclick="changeAttribute()">
+								Train</button>
+						</td>
+						<td>
+							<h5 class="major">Skills </h5>
+							<div id="skills_attr">
+							</div>
+						</td>
+
+					</tr>
+
+
+				</table>
+				<button> <a href="#welcome">Go back</a></button>
+			</article>
+
+			<article id="combat_attributes">
+				<h2 class="major">Combat Attributes </h2>
+				<div class="container">
+					<div id="combat_attributes_attr">
+
+						<h5> Vitality : <span id="attr_vitality"></span></h5>
+						<h5> Evasion : <span id="attr_evasion"></span></h5>
+						<h5> Armor : <span id="attr_armor"></span></h5>
+						<h5> Alacrity : <span id="attr_alacrity"></span></h5>
+						<h5> Tenacity : <span id="attr_tenacity"></span></h5>
+						<h5> Power : <span id="attr_power"></span></h5>
+					</div>
+
+					<div id="damage_taken_attr">
+						<button onclick="setDamage()">Set Damage</button>
+						<div style="padding-top:20px;">
+							<h5 id="attr_damage_taken"></h5>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<button> <a href="#welcome">Go back</a></button>
+				</div>
+
+
+			</article>
+
+		</div>
+
+
+
+	</div>
+
+	<div id="bg"></div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/Player.js"></script>
+	<script src="assets/js/utils.js"></script>
+	<script src="assets/js/Skill.js"></script>
+	<script src="assets/js/logic.js"></script>
+
+</body>
+
+</html>
